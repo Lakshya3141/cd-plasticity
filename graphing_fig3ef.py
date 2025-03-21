@@ -50,7 +50,7 @@ datas['delbExpected'] = datas['sp1.B']*datas['rho'] - datas['sp2.B']*datas['rho'
 desired_tau2 = 0.4 # 0.4 or 0.8 or 0.2
 dumsigeps = np.sort(np.unique(datas['sig_eps'])) # array([1.41421356, 3.16227766])
 desired_sig_eps = dumsigeps[2] # 0 or 1 or 2 (increasing index means higher fluctuations)
-ifn = "unstableCD_overlay"
+ifn = "unstableCD_3F"
 desired_a0 = 4.99 # 4.99 or 5.99
 cmap = 'turbo' #'cividis' # cmap
 
@@ -120,21 +120,21 @@ for i in range(len(data)):
 # Plot the common union of the above two equations
 for i in range(len(data)):
     if data.iloc[i]['sign_conv'] == -1 and data.iloc[i]['sign_cdexp'] == 1:
-        ax.scatter(data.iloc[i]['sig_u2'], data.iloc[i]['sig_s2'], marker='^', color='#A9A9A9', s=130, edgecolor='none')
+        ax.scatter(data.iloc[i]['sig_u2'], data.iloc[i]['sig_s2'], marker='^', color='#D3D3D3', s=150, edgecolor='black')
 
 # Plot the complement of the union of the above two equations
 for i in range(len(data)):
     if data.iloc[i]['sign_conv'] == 1 and data.iloc[i]['sign_cdexp'] == -1:
-        ax.scatter(data.iloc[i]['sig_u2'], data.iloc[i]['sig_s2'], marker='s', color='#A9A9A9', s=100, edgecolor='none')
-
+        ax.scatter(data.iloc[i]['sig_u2'], data.iloc[i]['sig_s2'], marker='s', color='#D3D3D3', s=100, edgecolor='black')
+# '#A9A9A9'
         
 ax.scatter(10, 1000, s=230, facecolors='none', edgecolors='red', linewidths=3, marker='o')
 # Add prediction line for CD
 ax.plot(sig_u2_unique, cdexp, c='black', label='No fluctuations', linewidth=4, alpha=1.0)
 
 # Set axis labels and limits
-ax.set_xlabel("($\sigma_u^2$)", fontsize=28)
-ax.set_ylabel("($\sigma_s^2$)", fontsize=28)
+ax.set_xlabel("$\sigma_u^2$", fontsize=28)
+ax.set_ylabel("$\sigma_s^2$", fontsize=28)
 ax.set_xlim(xlim_sigu)
 ax.set_ylim(ylim_sigs)
 ax.tick_params(axis='both', which='major', labelsize=23)
