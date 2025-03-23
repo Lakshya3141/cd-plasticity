@@ -236,7 +236,7 @@ tot = 60000
 CD_point = 52000
 CDnp_point = 56000
 a0 = np.array([5.01, 4.99])
-sig_eps = np.sqrt(8)
+sig_eps = np.sqrt(10)
 fn = "EvolveablePlasticity_SameLifeHistory"
 
 a, b, n, mls, mlc, sgs, sgc, epss, epsd1, epsd2, t_run, eps1, eps2 = run_main(

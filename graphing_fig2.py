@@ -65,7 +65,7 @@ im0 = plt.scatter(datas[0].sig_u2, datas[0].sig_s2, c=datas[0].delz, s=40, cmap=
 plt.plot(x, nfl, c = 'tab:orange', label = 'No fluctuations', linewidth=3, alpha=1.0)
 
 # Add red open circle at (10, 550)
-plt.scatter(10, 550, s=230, facecolors='none', edgecolors='red', linewidths=3, marker='o')
+plt.scatter(10, 550, s=170, facecolors='none', edgecolors='red', linewidths=3, marker='o')
 
 clb0 = fig.colorbar(im0, ax=ax, ticks=np.arange(0, 13, 2), pad=0.02, fraction=0.1, shrink=0.8) # Adjust shrink value
 clb0.ax.set_ylabel('|$z̅_1$ - $z̅_2$|', fontsize=25)
@@ -89,7 +89,7 @@ plt.plot(x, nfl, c = 'tab:orange', label = 'No fluctuations', linewidth=3, alpha
 plt.plot(x, fl, c = 'tab:blue', label = 'Fluctuating env.', linewidth=3, alpha=1.0)
 
 # Add red open circle at (10, 550)
-plt.scatter(10, 550, s=230, facecolors='none', edgecolors='red', linewidths=3, marker='o')
+plt.scatter(10, 550, s=170, facecolors='none', edgecolors='red', linewidths=3, marker='o')
 
 clb0 = fig.colorbar(im0, ax=ax, ticks=np.arange(0, 13, 2), pad=0.02, fraction=0.1, shrink=0.8) # Adjust shrink value
 clb0.ax.set_ylabel('|$z̅_1$ - $z̅_2$|', fontsize=25)
@@ -114,7 +114,7 @@ plt.plot(x, fl, c = 'tab:blue', label = 'Fluctuating env.', linewidth=3, alpha=1
 plt.plot(x, pls, c = 'tab:green', label = 'Evolving plasticity', linewidth=3, alpha=1.0)
 
 # Add red open circle at (10, 550)
-plt.scatter(10, 550, s=230, facecolors='none', edgecolors='red', linewidths=3, marker='o')
+plt.scatter(10, 550, s=170, facecolors='none', edgecolors='red', linewidths=3, marker='o')
 
 clb0 = fig.colorbar(im0, ax=ax, ticks=np.arange(0, 13, 2), pad=0.02, fraction=0.1, shrink=0.8) # Adjust shrink value
 clb0.ax.set_ylabel('|$z̅_1$ - $z̅_2$|', fontsize=25)
@@ -139,7 +139,7 @@ plt.plot(x, fl, c = 'tab:blue', label = 'Fluctuating env.', linewidth=3, alpha=1
 plt.plot(x, pls, c = 'tab:green', label = 'Evolving plasticity', linewidth=3, alpha=1.0)
 
 # Add red open circle at (10, 550)
-plt.scatter(10, 550, s=230, facecolors='none', edgecolors='red', linewidths=3, marker='o')
+plt.scatter(10, 550, s=170, facecolors='none', edgecolors='red', linewidths=3, marker='o')
 
 clb0 = fig.colorbar(im0, ax=ax, ticks=np.arange(0, 13, 0.01), pad=0.02, fraction=0.1, shrink=0.8) # Adjust shrink value
 clb0.ax.set_ylabel('|$b̅_1$ - $b̅_2$|', fontsize=25)

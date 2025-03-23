@@ -18,7 +18,7 @@ warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
 warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
 
 generations = 300000   # Number of generations to simulate 
-bins = 50 # bins x bins runs done acros sig_u x sig_s parameter space 
+bins = 100 # bins x bins runs done acros sig_u x sig_s parameter space 
 
 # STEP1 OF PYPET PIPELINE 
 # Add parameters for no fluctuations scenario (Fig 2A)
@@ -33,7 +33,7 @@ def add_parameters_nofluc(traj):
                          comment='Strength of stabilising selection')
     traj.f_add_parameter('com.sig_u', np.sqrt(10.0).item(),
                          comment='Utilisation curve variance')
-    traj.f_add_parameter('com.sig_eps', np.sqrt(10).item(),
+    traj.f_add_parameter('com.sig_eps', np.sqrt(8).item(),
                         comment='Strength of environmental fluctuations')
     traj.f_add_parameter('com.rho', 0.5,
                         comment='Autocorrelation between developmental'
@@ -89,7 +89,7 @@ def add_parameters_fluc(traj):
                          comment='Strength of stabilising selection')
     traj.f_add_parameter('com.sig_u', np.sqrt(10.0).item(),
                          comment='Utilisation curve variance')
-    traj.f_add_parameter('com.sig_eps', np.sqrt(10).item(),
+    traj.f_add_parameter('com.sig_eps', np.sqrt(8).item(),
                         comment='Strength of environmental fluctuations')
     traj.f_add_parameter('com.rho', 0.5,
                         comment='Autocorrelation between developmental'
@@ -145,7 +145,7 @@ def add_parameters_constplast(traj):
                          comment='Strength of stabilising selection')
     traj.f_add_parameter('com.sig_u', np.sqrt(10.0).item(),
                          comment='Utilisation curve variance')
-    traj.f_add_parameter('com.sig_eps', np.sqrt(10).item(),
+    traj.f_add_parameter('com.sig_eps', np.sqrt(8).item(),
                         comment='Strength of environmental fluctuations')
     traj.f_add_parameter('com.rho', 0.5,
                         comment='Autocorrelation between developmental'
@@ -201,7 +201,7 @@ def add_parameters_evolvplast(traj):
                          comment='Strength of stabilising selection')
     traj.f_add_parameter('com.sig_u', np.sqrt(10.0).item(),
                          comment='Utilisation curve variance')
-    traj.f_add_parameter('com.sig_eps', np.sqrt(10).item(),
+    traj.f_add_parameter('com.sig_eps', np.sqrt(8).item(),
                         comment='Strength of environmental fluctuations')
     traj.f_add_parameter('com.rho', 0.5,
                         comment='Autocorrelation between developmental'
